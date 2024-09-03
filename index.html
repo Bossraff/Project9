@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timers for COC</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/9.21.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.21.0/firebase-auth.js"></script>
+    <script src="firebase.js" type="module"></script>
+</head>
+<body>
+
+    <!-- INICIO CONTAINER-->
+    <div class="d-flex flex-column">
+        <!-- INICIO HEADER-->
+        <div id="sidebar" class="sidebar bg-menu">
+            <div class="sidebar-header">
+                <button class="btn btn-hamburguer" id="sidebarToggle"><i class="ri-menu-line"></i></button>
+                <img src="LOgo-removebg-preview.png" alt="Logo" class="logo">
+                <button class="btn btn-dark-mode" id="darkModeToggle"><i class="ri-moon-line"></i></button>
+            </div>
+            <ul class="nav flex-column">
+                <form>
+                        <a class="nav-link" href="login.html"><i class="ri-login-box-line"></i><span class="login-cad-menu">Login</span></a>
+
+                    </li>
+                    <li class="nav-item" type="submit">
+                        <a class="nav-link" href="register.html"><i class="ri-user-add-line"></i><span class="login-cad-menu">Register</span></a>
+                    </li>
+                    <br>
+                </form>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html"><i class="ri-history-line"></i><span class="link-text"> HOME</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="ri-film-line"></i><span class="link-text"> Layouts</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="ri-thumb-up-line"></i><span class="link-text">Feedback</span></a>
+                </li>
+            </ul>
+        </div>
+        <!-- FIM INICIO HEADER-->
+
+        <!-- Main Content Start -->
+        <div class="content p-4">
+            <header>
+                <h1>Buy Your Crypto Coin</h1>
+            </header>
+            <main>
+                <form id="purchase-form">
+                    <label for="amount">Amount (in USD):</label>
+                    <input type="number" id="amount" name="amount" required>
+
+                    <label for="payment-method">Payment Method:</label>
+                    <select id="payment-method" name="payment-method" required>
+                        <option value="">Select Payment Method</option>
+                        <option value="gcash">GCash</option>
+                        <option value="bank">Bank Account</option>
+                    </select>
+
+                    <button type="submit">Buy Now</button>
+                </form>
+                <div id="message"></div>
+                <div id="qr-code-container" style="display: none;">
+                    <h2>Your Payment QR Code</h2>
+                    <img id="qr-code" src="" alt="Payment QR Code">
+                </div>
+            </main>
+
+           
+            <!-- FIM DO BOTAO DE FILTRO -->
+            <!-- INICIO TEMPORIZADORES-->
+            <div id="temporizadores" class="row mr-1">
+                <!-- CADA TEMPORIZADOR APARECERÁ AQUI-->
+            </div>
+            <!-- FIM TEMPORIZADORES-->
+        </div>
+        <!-- Main Content End -->
+    </div>
+    <!-- FIM CONTAINER -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+   
+
+</html>
