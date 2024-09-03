@@ -50,39 +50,46 @@
         <!-- FIM INICIO HEADER-->
 
         <!-- Main Content Start -->
-        <div class="content p-4">
-            <header>
-                <h1>Buy Your Crypto Coin</h1>
-            </header>
-            <main>
-                <form id="purchase-form">
-                    <label for="amount">Amount (in USD):</label>
-                    <input type="number" id="amount" name="amount" required>
+      <div class="container">
+  <h2>Money Loan Calculator</h2>
+  <form id="loan-form">
+    <div class="form-group">
+      <label for="amount">Loan Amount (₱):</label>
+      <input type="number" id="amount" required>
+    </div>
+    <div class="form-group">
+      <label for="months">Repayment Period (months):</label>
+      <input type="number" id="months" required>
+    </div>
+    <div class="form-group">
+      <label for="interest-rate">Interest Rate:</label>
+      <select id="interest-rate" required>
+        <option value="0.10">10%</option>
+        <option value="0.15" selected>15%</option>
+        <option value="0.20">20%</option>
+        <option value="0.25">25%</option>
+        <option value="0.30">30%</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <button type="submit">Calculate Loan</button>
+    </div>
+  </form>
+  <div id="results" style="display:none;">
+    <h3>Loan Details</h3>
+    <p><strong>Loan Amount:</strong> ₱<span id="loan-amount"></span></p>
+    <p><strong>Interest Rate:</strong> <span id="display-interest-rate"></span></p>
+    <p><strong>Interest:</strong> ₱<span id="loan-interest"></span></p>
+    <p><strong>Total Amount Due:</strong> ₱<span id="total-amount-due"></span></p>
+    <hr>
+    <h3>Payment Plan</h3>
+    <p><strong>Monthly Payment:</strong> ₱<span id="monthly-payment"></span></p>
+    <p><strong>Total Payment:</strong> ₱<span id="total-payment"></span></p>
+  </div>
 
-                    <label for="payment-method">Payment Method:</label>
-                    <select id="payment-method" name="payment-method" required>
-                        <option value="">Select Payment Method</option>
-                        <option value="gcash">GCash</option>
-                        <option value="bank">Bank Account</option>
-                    </select>
-
-                    <button type="submit">Buy Now</button>
-                </form>
-                <div id="message"></div>
-                <div id="qr-code-container" style="display: none;">
-                    <h2>Your Payment QR Code</h2>
-                    <img id="qr-code" src="" alt="Payment QR Code">
-                </div>
-            </main>
-
-           
-            <!-- FIM DO BOTAO DE FILTRO -->
-            <!-- INICIO TEMPORIZADORES-->
-            <div id="temporizadores" class="row mr-1">
-                <!-- CADA TEMPORIZADOR APARECERÁ AQUI-->
-            </div>
-            <!-- FIM TEMPORIZADORES-->
-        </div>
+  <!-- Application Form -->
+  
+</div>
         <!-- Main Content End -->
     </div>
     <!-- FIM CONTAINER -->
